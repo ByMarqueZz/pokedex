@@ -1,34 +1,23 @@
 import {React, useEffect, useState} from 'react';
+import ItemList from '../itemList';
+import './style.css';
 
 function Cuerpo() {
   const [listaPokemon, setListaPokemons] = useState([]);
-  const [listaCompleta, setlistaCompleta] = useState([]);
   const [urlPokeApi, setUrlPokeApi] = useState('https://pokeapi.co/api/v2/pokemon?limit=8');
   useEffect(() => {fetchPokemon();}, [])
   function fetchPokemon() {
     fetch('https://pokeapi.co/api/v2/pokemon?limit=8')
     .then(response => response.json())
     .then(data => {
-      console.log(data);
       setListaPokemons(data.results);
-      cargarAllInfo();
     });
   }
-  function cargarAllInfo() {
-    listaPokemon.map( (pokemon, index) => {
-      fetch(pokemon.url)
-      .then(response => response.json())
-      .then(data => {
-        console.log(data);
-        setlistaCompleta(listaCompleta.push(data));
-      });
-    })
-  }
+  
   function cargaTodos() {
     fetch(urlPokeApi)
     .then(response => response.json())
     .then(data => {
-      console.log(data)
       setUrlPokeApi(data.next);
       setListaPokemons(listaPokemon.concat(data.results));
     });
@@ -38,14 +27,17 @@ function Cuerpo() {
   }
   return (
     <>
-      <ul>
+      <ul className='listaPokemons'>
         {
-          listaCompleta.map( (pokemon) => 
-            <li>{pokemon.name}</li>
+          listaPokemon.map( (pokemon, index) => 
+            <li key={index}><ItemList key={index} url={pokemon.url}/></li>
           )
         }
       </ul>
-      <button onClick={cargarMas}>Cargar más</button>
+      <div className="buttonCargarMas">
+        <button className="btn btn-warning" onClick={cargarMas}>Cargar más</button>
+      </div>
+
     </>
   );
   }
