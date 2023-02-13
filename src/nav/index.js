@@ -46,9 +46,8 @@ function Nav(props) {
                             <ItemList key={index} url={pokemon.url}/>
                         </li>
                         
-                    )
-                    
-                })}
+                    )})
+                }
             </ul>
             
         </>
