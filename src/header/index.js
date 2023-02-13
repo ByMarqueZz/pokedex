@@ -1,6 +1,7 @@
 import {React} from 'react';
 import './style.css';
 import { Link } from "react-router-dom";
+import Nav from '../nav';
 
 function Header() {
     return (
@@ -20,6 +21,7 @@ function Header() {
                 <Link to="/pokemons" className="nav-link">Pokemons</Link>
               </li>
               </ul>
+              <Nav url="https://pokeapi.co/api/v2/pokemon?limit=1279" />
             </div>
           </div>
         </nav>

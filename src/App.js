@@ -12,12 +12,15 @@ function App() {
     <>
       <BrowserRouter>
       <Header />
-        <Routes>
-          <Route path="/" element={<Home />}></Route>
-          <Route path="/pokemons" element={<Cuerpo />}></Route>
-          **<Route path="/detalle/:id" element={<Detalle />}></Route>**
-          **<Route path="*" element={<h1>404: Not Found</h1>}></Route>**
-        </Routes>
+        <div className='main'>
+          <Routes>
+            <Route path="/" element={<Home />}></Route>
+            <Route path="/pokemons" element={<Cuerpo />}></Route>
+            **<Route path="/detalle/:id" element={<Detalle />}></Route>**
+            **<Route path="*" element={<h1>404: Not Found</h1>}></Route>**
+          </Routes>
+        </div>
+        
       </BrowserRouter>
     </>  
   );

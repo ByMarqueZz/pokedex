@@ -1,0 +1,12 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 5%;
+    gap: 5%;
+    background-color: white;
+    padding: 2%;
+    border-radius: 16px;
+    border: 1px solid grey;
+}

@@ -28,15 +28,16 @@ function Cuerpo() {
   return (
     <>
       <ul className='listaPokemons'>
-        {
-          listaPokemon.map( (pokemon, index) => 
-            <li key={index}><ItemList key={index} url={pokemon.url}/></li>
-          )
-        }
-      </ul>
-      <div className="buttonCargarMas">
-        <button className="btn btn-warning" onClick={cargarMas}>Cargar más</button>
-      </div>
+          {
+            listaPokemon.map( (pokemon, index) => 
+              <li key={index}><ItemList key={index} url={pokemon.url}/></li>
+            )
+          }
+        </ul>
+        <div className="buttonCargarMas">
+          <button className="btn btn-warning" onClick={cargarMas}>Cargar más</button>
+        </div>
+      
 
     </>
   );

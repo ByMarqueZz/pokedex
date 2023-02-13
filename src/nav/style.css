@@ -1,0 +1,45 @@
+.listaPokemonFiltrados {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.listaPokemonFiltrados li {
+    min-width: 40%;
+    text-align: center;
+    border: 1px solid grey;
+    margin: 5%;
+}
+.listaPokemonFiltrados li a {
+    color: black;
+    text-decoration: none;
+}
+@media screen and (min-width: 992px) {
+    .listaPokemonFiltrados {
+        position: fixed;
+        right: 1%;
+        top: 5%;
+        width: 20%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        list-style: none;
+        max-height: 300px;
+        overflow-y: scroll;
+        background-color: white;
+        border: 1px solid grey;
+    }
+    .listaPokemonFiltrados li {
+        min-width: 70%;
+        text-align: center;
+        border: 1px solid grey;
+        margin: 5%;
+    }
+    .listaPokemonFiltrados li a {
+        color: black;
+        text-decoration: none;
+    }    
+}
