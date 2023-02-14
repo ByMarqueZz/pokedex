@@ -20,7 +20,7 @@ function Nav(props) {
 
     function filtrarLista() {
         const listaFiltrada = listaNombres.filter( (pokemon) => {
-            return pokemon.name.includes(input);
+            return pokemon.name.includes(input.toLocaleLowerCase());
         });
         setListaFiltrada(listaFiltrada);
     }
