@@ -8,13 +8,15 @@ function PokemonJuego(props) {
     const [result, setResult] = useState('');
     const [botonGanar, setBotonGanar] = useState([]);
 
-    useEffect(() => {cargarAllInfo();}, []);
+    useEffect(() => {cargarAllInfo();}, [props.poke]);
     useEffect(() => {setButtons(createButtons());}, [pokemon]);
     function cargarAllInfo() {
-      fetch(props.url)
+      fetch(props.poke.url)
       .then(response => response.json())
       .then(data => {
         setPokemon(data);
+        setBotonGanar([]);
+        setResult('');
         setIsLoading(false);
       });
     }
@@ -55,6 +57,7 @@ function PokemonJuego(props) {
   if(isLoading) return (<p>Cargando...</p>);
     return (
         <>
+            <audio src="./assets/audio.mp3" autoPlay/>
             <div className='pokemonImgDiv'>
                 <img className="pokemonJugar" src={pokemon.sprites.front_default} alt={pokemon.name} draggable="false"/>
             </div>

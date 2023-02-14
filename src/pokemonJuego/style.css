@@ -1,40 +1,51 @@
 .pokemonJugar {
     filter: brightness(0) saturate(100%);
-    animation: animacionPokemoFoto 1s ease-in-out alternate;
+    animation: animacionPokemoFoto 1.5s ease-in-out alternate;
 }
 @keyframes animacionPokemoFoto {
     0% {
         transform: scale(0);
+        rotate: 0deg;
     }
     10% {
         transform: scale(0.1);
+        rotate: 108deg;
     }
     20% {
         transform: scale(0.2);
+        rotate: 216deg;
     }
     30% {
         transform: scale(0.3);
+        rotate: 324deg;
     }
     40% {
         transform: scale(0.4);
+        rotate: 432deg;
     }
     50% {
         transform: scale(0.5);
+        rotate: 540deg;
     }
     60% {
         transform: scale(0.6);
+        rotate: 648deg;
     }
     70% {
         transform: scale(0.7);
+        rotate: 756deg;
     }
     80% {
         transform: scale(0.8);
+        rotate: 864deg;
     }
     90% {
         transform: scale(0.9);
+        rotate: 972deg;
     }
     100% {
         transform: scale(1);
+        rotate: 1080deg;
     }
 }
 .listaBotones {

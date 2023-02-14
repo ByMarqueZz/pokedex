@@ -22,18 +22,16 @@ function Juego() {
         let pokemon2 = listaNombres[random];
         if (pokemon2 && pokemon2 !== undefined) {
             setPokemon(pokemon2);
-            console.log(pokemon2)
         }
     }
     if(isLoading) return (<p>Cargando...</p>);
     if(pokemon) return (
         <>
-            {pokemon.name}
             <div className='headerGame'>
                 <h1>Who's that pokemon?</h1>
             </div>
             <div className='pokemonAleatorio'>
-                <PokemonJuego url={pokemon.url} lista={listaNombres} cargarAllInfo={selectPokemon}/>
+                <PokemonJuego poke={pokemon} lista={listaNombres} cargarAllInfo={selectPokemon}/>
             </div>
         </>
     );
