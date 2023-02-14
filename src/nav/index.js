@@ -1,5 +1,5 @@
 import {React, useEffect, useState} from 'react';
-import ItemList from '../itemList';
+import { Link } from "react-router-dom";
 import './style.css';
 
 function Nav(props) {
@@ -31,21 +31,22 @@ function Nav(props) {
     if(isLoading) return (<p>Cargando...</p>);
     return (
         <>
-            <form className="d-flex" role="search">
+            <div className="d-flex" role="search">
                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={input} onChange={e => 
                     {
                         setInput(e.target.value);
                         filtrarLista();
                     }} />
                 <button className="btn btn-outline-success" onClick={borrarInput}>Borrar</button>
-            </form>
+            </div>
             <ul className='listaPokemonFiltrados'>
                 {listaFiltrada.map( (pokemon, index) =>{
                     return (
-                        <li>
-                            <ItemList key={index} url={pokemon.url}/>
+                        <li key={index}>
+                            <Link to={"/detalle/"+pokemon.name}>
+                                {pokemon.name}
+                            </Link>
                         </li>
-                        
                     )})
                 }
             </ul>

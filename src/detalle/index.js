@@ -29,7 +29,7 @@ function Detalle() {
     const [pokemon, setPokemon] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    useEffect(() => {cargarAllInfo();}, []);
+    useEffect(() => {cargarAllInfo();}, [id]);
 
     function cargarAllInfo() {
       fetch(url)

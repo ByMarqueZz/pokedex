@@ -20,6 +20,9 @@ function Header() {
               <li className="nav-item">
                 <Link to="/pokemons" className="nav-link">Pokemons</Link>
               </li>
+              <li className="nav-item">
+                <Link to="/jugar" className="nav-link">Jugar</Link>
+              </li>
               </ul>
               <Nav url="https://pokeapi.co/api/v2/pokemon?limit=1279" />
             </div>

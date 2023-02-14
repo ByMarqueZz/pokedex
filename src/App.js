@@ -4,6 +4,7 @@ import Header from './header';
 import Cuerpo from './cuerpo';
 import Home from './landing-page';
 import Detalle from './detalle';
+import Juego from './juego';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/pokemons" element={<Cuerpo />}></Route>
+            <Route path="/jugar" element={<Juego />}></Route>
             **<Route path="/detalle/:id" element={<Detalle />}></Route>**
             **<Route path="*" element={<h1>404: Not Found</h1>}></Route>**
           </Routes>

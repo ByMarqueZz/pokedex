@@ -21,8 +21,9 @@
     .listaPokemonFiltrados {
         position: fixed;
         right: 1%;
-        top: 5%;
+        top: 10%;
         width: 20%;
+        padding: 0px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -30,7 +31,6 @@
         max-height: 300px;
         overflow-y: scroll;
         background-color: white;
-        border: 1px solid grey;
     }
     .listaPokemonFiltrados li {
         min-width: 70%;

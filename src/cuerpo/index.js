@@ -30,7 +30,7 @@ function Cuerpo() {
       <ul className='listaPokemons'>
           {
             listaPokemon.map( (pokemon, index) => 
-              <li key={index}><ItemList key={index} url={pokemon.url}/></li>
+              <li key={index}><ItemList key={index} url={'https://pokeapi.co/api/v2/pokemon/'+pokemon.name}/></li>
             )
           }
         </ul>
