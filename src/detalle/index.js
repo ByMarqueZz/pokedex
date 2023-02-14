@@ -45,7 +45,7 @@ function Detalle() {
     <>
         <div className='detalle'>
             <div>
-                <h1 className='detalleH1'>{pokemon.name} Nº {id}</h1>
+                <h1 className='detalleH1'>{pokemon.name}</h1>
             </div>
             <div className='detalleCompleto'>
                 <div className='imagen'>

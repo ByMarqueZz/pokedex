@@ -32,7 +32,7 @@ function Nav(props) {
     return (
         <>
             <div className="d-flex" role="search">
-                <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={input} onChange={e => 
+                <input className="form-control me-2" type="search" placeholder="Buscar pokemon" aria-label="Search" value={input} onChange={e => 
                     {
                         setInput(e.target.value);
                         filtrarLista();

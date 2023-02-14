@@ -5,6 +5,7 @@ import Cuerpo from './cuerpo';
 import Home from './landing-page';
 import Detalle from './detalle';
 import Juego from './juego';
+import Footer from './footer';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -22,7 +23,7 @@ function App() {
             **<Route path="*" element={<h1>404: Not Found</h1>}></Route>**
           </Routes>
         </div>
-        
+        <Footer/>
       </BrowserRouter>
     </>  
   );

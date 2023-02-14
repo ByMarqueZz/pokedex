@@ -31,6 +31,7 @@ function Juego() {
                 <h1>Who's that pokemon?</h1>
             </div>
             <div className='pokemonAleatorio'>
+                <audio src="./assets/audio.mp3" autoPlay controls className='audio'/>
                 <PokemonJuego poke={pokemon} lista={listaNombres} cargarAllInfo={selectPokemon}/>
             </div>
         </>

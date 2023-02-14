@@ -57,7 +57,6 @@ function PokemonJuego(props) {
   if(isLoading) return (<p>Cargando...</p>);
     return (
         <>
-            <audio src="./assets/audio.mp3" autoPlay/>
             <div className='pokemonImgDiv'>
                 <img className="pokemonJugar" src={pokemon.sprites.front_default} alt={pokemon.name} draggable="false"/>
             </div>
